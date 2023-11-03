@@ -13,7 +13,7 @@ func TestIfItGetsAnErrorIfIdIsBlank(t *testing.T) {
 
 func TestIfItGetsAnErrorIfPriceIsBlank(t *testing.T) {
 	order := Order{ID: "1"}
-	assert.Error(t, order.Validate(), "price is required")
+	assert.Error(t, order.Validate(), "price must be greater than zero")
 }
 
 func TestIfItGetsAnErrorIfPTaxIsBlank(t *testing.T) {
